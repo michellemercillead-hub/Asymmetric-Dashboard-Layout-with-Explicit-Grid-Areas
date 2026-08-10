@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Admin dashboard with explicit CSS Grid layout and monitoring metrics.">
+  <title>Week 04 Lab: Dynamic Dashboard Grid</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="dashboard-shell">
+    <header class="dashboard-header">
+      <h1 class="dashboard-title">System Metrics Console</h1>
+      <p class="dashboard-subtitle">Real-time infrastructure analytics and monitoring.</p>
+    </header>
+
+    <!-- The Master Dashboard Grid -->
+    <main class="dashboard-grid">
+      
+      <!-- Card 1: Main Graph (Spans multiple columns/rows) -->
+      <section class="dash-card card-chart">
+        <div class="dash-card__header">
+          <h3>Network Throughput</h3>
+          <span class="status-indicator">Live</span>
+        </div>
+        <div class="dash-card__content placeholder-chart">
+          <!-- Visually represents a large chart workspace -->
+          <div class="bar-chart-mock"></div>
+        </div>
+      </section>
+
+      <!-- Card 2: Quick Stat A (Small, compact metrics box) -->
+      <section class="dash-card card-stat-a">
+        <span class="stat-label">Active Connections</span>
+        <span class="stat-number">4,821</span>
+        <span class="stat-trend trend--up">+12% vs last hour</span>
+      </section>
+
+      <!-- Card 3: Quick Stat B (Small, compact metrics box) -->
+      <section class="dash-card card-stat-b">
+        <span class="stat-label">Error Rate</span>
+        <span class="stat-number">0.04%</span>
+        <span class="stat-trend trend--down">-2.1% vs last hour</span>
+      </section>
+
+      <!-- Card 4: Detailed Activity Feed (Tall, vertical list panel) -->
+      <section class="dash-card card-feed">
+        <div class="dash-card__header">
+          <h3>Recent Events Log</h3>
+        </div>
+        <ul class="activity-list">
+          <li><strong>12:14:10</strong> - DB Backup completed successfully</li>
+          <li><strong>12:11:03</strong> - API endpoint latency alert resolved</li>
+          <li><strong>12:05:45</strong> - SSL certificate renewed automatically</li>
+          <li><strong>12:00:01</strong> - Automated cron task executed</li>
+        </ul>
+      </section>
+
+      <!-- Card 5: Infrastructure Status (Wide block) -->
+      <section class="dash-card card-status">
+        <div class="dash-card__header">
+          <h3>Cluster Distribution</h3>
+        </div>
+        <div class="status-pills">
+          <span class="pill pill--online">US-East (Online)</span>
+          <span class="pill pill--online">EU-Central (Online)</span>
+          <span class="pill pill--degraded">AP-South (Degraded)</span>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
